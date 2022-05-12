@@ -24,7 +24,7 @@ const getUniqueNumber = (except: Set<number>): number => {
 const uuid = () => (Date.now() * Math.random()).toString(36);
 
 const toHumanString = (num: number): string =>
-  String(num).length < 10 ? `0${num}` : `${num}`;
+  num < 10 ? `0${num}` : `${num}`;
 
 const generatePeople = (except: Set<number>): ITableItem => {
   const first_name = getRandomElement(firstNameConventions),
